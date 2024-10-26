@@ -42,8 +42,9 @@ This project uses PostgreSQL. Set up a PostgreSQL database with connection detai
 1. install the database
 2. after installing create a database
 
-** After creating the database create table in the psql:
-'''bash
+** After creating the database create table in the psql:**
+
+
 CREATE TABLE rules (
     id SERIAL PRIMARY KEY,         -- Auto-incrementing ID for each rule
     rule_name VARCHAR(255) UNIQUE, -- Unique name for the rule
@@ -51,23 +52,33 @@ CREATE TABLE rules (
     rule_ast JSONB                 -- JSONB column to store the rule's AST
 );
 
-
-**Running the Application**
-
-**Start the Main Application:
-
-command python app.py
-
-**Launch the Rule Checker GUI:**
-
-command: python rule_checker_gui.py
+**For checking the table in databse**
+1. open the psql command prompt
+2. command: SELECT * FROM rules;
 
 **Configuration**
 1. Database Settings: Modify the configurations in the db/ directory as needed.
 2. Rule Definitions: Update rule logic in the engine/ directory according to the application requirements.
 
+**Running the Application**
+
+Start the Main Application:
+
+command: python app.py
+
+**Launch the Rule Checker GUI:**
+
+command: python rule_checker_gui.py
+
+
 **Data for testing**
-   
+   1. create_rule: rule name: 1  rule string: "((age > 30 AND department = 'Sales') OR (salary > 50000))"
+   2. evalute_ rule: rule name: 1  json data: {"age": 15,"department": "Sales","salary": 60000}
+   3. combine_rule:   comma seperated-names and give required new rule name
+   4. modify_rule: rule name: 1    new rule string: "((age >+ 40 AND department = 'HR') OR (salary > 50000))"
+   5. delete_rule: rule name
+   6. get_all_rules
+
 **Key Features**
 
 1. Automated Rule Evaluation: Processes incoming data based on predefined rules.
