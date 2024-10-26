@@ -44,6 +44,7 @@ This project uses PostgreSQL. Set up a PostgreSQL database with connection detai
 
 **After creating the database create table in the psql**
 
+command:
 
 CREATE TABLE rules (
     id SERIAL PRIMARY KEY,         -- Auto-incrementing ID for each rule
