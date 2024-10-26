@@ -16,6 +16,11 @@ rule_engine/
 ├── venv/                      # Virtual environment for dependencies
 └── __pycache__/               # Compiled Python files
 
+**Tech Stack**
+1. Programming Language: Python
+2. Database: PostgreSQL
+
+
 **Prerequisites**
 1. Python 3.8+
 2. Git
