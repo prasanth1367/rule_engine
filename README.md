@@ -42,7 +42,7 @@ This project uses PostgreSQL. Set up a PostgreSQL database with connection detai
 1. install the database
 2. after installing create a database
 
-** After creating the database create table in the psql:**
+**After creating the database create table in the psql**
 
 
 CREATE TABLE rules (
